@@ -3,8 +3,8 @@
   I first encountered software "plugins" with Photoshop 3.0 and Kai's Power 
 Tools on Windows 3.1... and it blew my mind!  The idea that a piece of software 
 could be architected so that you could add and remove extra *3rd party* modules 
-and have them integrate so tightly was something of a revelation to me.  
-Separate programs communicating was one thing, but this was a seamless 
+and have them integrate so tightly was something of a revelation to
+me. Separate programs communicating was one thing, but this was a seamless 
 extension to an existing piece of software.  Amazing.
 
   In programming this technique is known as a "dynamic library" and its 
@@ -31,8 +31,8 @@ and I'm going to assume proficiency in C and C++.
   The conceptual problem is this: from inside of a running program, how do I 
 find a function in a compiled file and then how do I execute it?
 
-  The second part of that question is easily answered by the language itself.  
-C and C++ provide a data type of "function pointer" that can be used 
+  The second part of that question is easily answered by the language
+itself.  C and C++ provide a data type of "function pointer" that can be used 
 syntactically in the same places that a function can, but can have an 
 assignable value.  Declaring a function pointer looks like `void 
 (*my_func_ptr)();` and you can call it just like any other function with 
@@ -46,7 +46,7 @@ string and returning that value).
    It's important to point out that C/C++ can only resolve this data typing at 
 compile time.  Since type information is not baked into compiled objects, there 
 is no way for the program to determine at run time if the function has the 
-correct signature.  With dynamic libraries this it's entirely up to you to make 
+correct signature.  With dynamic libraries this is entirely up to you to make 
 sure that you're invoking the dynamically loaded functions with the correct 
 arguments and working with their output properly.  This is why it's typical to 
 put function signatures in `.h` files so that there is a published standard for 
